@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class raidSorter25 {
+public class raidSorter10 {
     public static void main(String[] args) {
         Raids r1 = new Raids("Naxxramas",10);
         Raids r2 = new Raids("Naxxramas",25);
@@ -42,89 +42,90 @@ public class raidSorter25 {
         Roles a36 = new Roles("Tusktusk","Rogue","Combat","melee");
         Roster raid10 = new Roster(r1);
         Roster raid25 = new Roster(r2);
-        System.out.println(r2);
+        System.out.println(r1);
         int userPlayerCount = Integer.parseInt(JOptionPane.showInputDialog("Enter Player amount: "));
         for (int i = 0; i < userPlayerCount; i++) {
             String name = JOptionPane.showInputDialog("Enter Player name: ");
             if (a1.getName().equals(name)) {
-                raid25.addplayer25(a1); //Ballongknut
+                raid10.addplayer10(a1); //Ballongknut
             } else if (a2.getName().equals(name)) {
-                raid25.addplayer25(a2); //Sonics
+                raid10.addplayer10(a2); //Sonics
             } else if (a3.getName().equals(name)) {
-                raid25.addplayer25(a3); //Dolmer
+                raid10.addplayer10(a3); //Dolmer
             } else if (a4.getName().equals(name)) {
-                raid25.addplayer25(a4); //Lealuna
+                raid10.addplayer10(a4); //Lealuna
             } else if (a5.getName().equals(name)) {
-                raid25.addplayer25(a5); //Plebtank
+                raid10.addplayer10(a5); //Plebtank
             } else if (a6.getName().equals(name)) {
-                raid25.addplayer25(a6); //Sylive
+                raid10.addplayer10(a6); //Sylive
             } else if (a7.getName().equals(name)) {
-                raid25.addplayer25(a7); //Coké
+                raid10.addplayer10(a7); //Coké
             } else if (a8.getName().equals(name)) {
-                raid25.addplayer10(a8); //Gortha
+                raid10.addplayer10(a8); //Gortha
             } else if (a9.getName().equals(name)) {
-                raid25.addplayer25(a9); //Shameal
+                raid10.addplayer10(a9); //Shameal
             } else if (a10.getName().equals(name)) {
-                raid25.addplayer25(a10); //Juan
+                raid10.addplayer10(a10); //Juan
             } else if (a11.getName().equals(name)) {
-                raid25.addplayer25(a11); //Walker
+                raid10.addplayer10(a11); //Walker
             } else if (a12.getName().equals(name)) {
-                raid25.addplayer25(a12); //Slizac
+                raid10.addplayer10(a12); //Slizac
             } else if (a13.getName().equals(name)) {
-                raid25.addplayer25(a13); //Alnico
+                raid10.addplayer10(a13); //Alnico
             } else if (a14.getName().equals(name)) {
-                raid25.addplayer25(a14); //Lilt
+                raid10.addplayer10(a14); //Lilt
             } else if (a15.getName().equals(name)) {
-                raid25.addplayer25(a15); //Teteh
+                raid10.addplayer10(a15); //Teteh
             } else if (a16.getName().equals(name)) {
-                raid25.addplayer25(a16); //Bonecaller
+                raid10.addplayer10(a16); //Bonecaller
             } else if (a17.getName().equals(name)) {
-                raid25.addplayer25(a17); //Armaga
+                raid10.addplayer10(a17); //Armaga
             } else if (a18.getName().equals(name)) {
-                raid25.addplayer25(a18); //Schmeal
-            //} else if (a19.getName().equals(name)) {
-            //    raid25.addplayer25(a19); //Gortha
+                raid10.addplayer10(a18); //Schmeal
+                //} else if (a19.getName().equals(name)) {
+                //    raid25.addplayer10(a19); //Gortha
             } else if (a20.getName().equals(name)) {
-                raid25.addplayer25(a20); //Crazykami
+                raid10.addplayer10(a20); //Crazykami
             } else if (a21.getName().equals(name)) {
-                raid25.addplayer25(a21); //Myre
+                raid10.addplayer10(a21); //Myre
             } else if (a22.getName().equals(name)) {
-                raid25.addplayer25(a22); //Emaenriel
+                raid10.addplayer10(a22); //Emaenriel
             } else if (a23.getName().equals(name)) {
-                raid25.addplayer25(a23); //Malizzy
+                raid10.addplayer10(a23); //Malizzy
             } else if (a23.getName().equals(name)) {
-                raid25.addplayer25(a23); //Malizzy
+                raid10.addplayer10(a23); //Malizzy
             } else if (a24.getName().equals(name)) {
-                raid25.addplayer25(a24); //Skumle
+                raid10.addplayer10(a24); //Skumle
             } else if (a25.getName().equals(name)) {
-                raid25.addplayer25(a25); //Toxpat
+                raid10.addplayer10(a25); //Toxpat
             } else if (a26.getName().equals(name)) {
-                raid25.addplayer25(a26); //Snelis
+                raid10.addplayer10(a26); //Snelis
             } else if (a27.getName().equals(name)) {
-                raid25.addplayer25(a27); //Noizz
+                raid10.addplayer10(a27); //Noizz
             } else if (a28.getName().equals(name)) {
-                raid25.addplayer25(a28); //Hidon
+                raid10.addplayer10(a28); //Hidon
             } else if (a29.getName().equals(name)) {
-                raid25.addplayer25(a29); //Justice
+                raid10.addplayer10(a29); //Justice
             } else if (a30.getName().equals(name)) {
-                raid25.addplayer25(a30); //Dukun
+                raid10.addplayer10(a30); //Dukun
             } else if (a31.getName().equals(name)) {
-                raid25.addplayer25(a31); //Proudmane
+                raid10.addplayer10(a31); //Proudmane
             } else if (a32.getName().equals(name)) {
-                raid25.addplayer25(a32); //Thaloc
+                raid10.addplayer10(a32); //Thaloc
             } else if (a33.getName().equals(name)) {
-                raid25.addplayer25(a33); //Wolfscream
+                raid10.addplayer10(a33); //Wolfscream
             } else if (a34.getName().equals(name)) {
-                raid25.addplayer25(a34); //Chuchulingo
+                raid10.addplayer10(a34); //Chuchulingo
             } else if (a35.getName().equals(name)) {
-                raid25.addplayer25(a35); //Mobba
+                raid10.addplayer10(a35); //Mobba
             } else if (a36.getName().equals(name)) {
-                raid25.addplayer25(a36); //Tusktusk
+                raid10.addplayer10(a36); //Tusktusk
             }
         }
         System.out.println();
+        System.out.println();
         System.out.println("**Bench**");
-        raid25.checkBench();
+        raid10.checkBench();
 
     }
 }
