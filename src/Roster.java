@@ -1,6 +1,15 @@
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.RichTextString;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.*;
 
 import javax.swing.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Roster {
     private Raids raid;
@@ -18,7 +27,7 @@ public class Roster {
         this.raid = raid;
     }
 
-/*    public void excelOut() {
+    public void excelOut() {
         int rowCount = 0;
         int columnCount = 0;
         XSSFWorkbook x = new XSSFWorkbook();
@@ -36,7 +45,7 @@ public class Roster {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }*/
+    }
 
     public void addplayer10(Roles r) {
         String melee = "melee";
