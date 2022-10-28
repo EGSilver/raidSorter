@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RaidComposition:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RaidComposition_jar</output-path>
+    <root id="archive" name="RaidComposition.jar">
+      <element id="module-output" name="RaidComposition" />
+    </root>
+  </artifact>
+</component>
