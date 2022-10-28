@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Roster {
     private Raids raid;
@@ -100,6 +101,7 @@ public class Roster {
 
 
     public void addplayer25(Roles r) {
+        Scanner userInput = new Scanner(System.in);
         String melee = "melee";
         String healer = "healer";
         String tank = "tank";
@@ -203,15 +205,16 @@ public class Roster {
                 playerCounter++;
                 hunter++;
                 System.out.println(playerCounter + " " + r.getName() + " " + r.getType());
-            } else {
+            } else
                 this.bench.add(r);
-            }
             //System.out.println(playerCounter);
         }
     }
 
     public void checkBench() {
-        System.out.println(bench);
+        for (Roles k : bench) {
+            System.out.println(k.getName());
+        }
     }
 
     public void add25() {
