@@ -1,4 +1,13 @@
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.RichTextString;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.*;
+
 import javax.swing.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,6 +25,26 @@ public class Roster {
 
     public Roster(Raids raid) {
         this.raid = raid;
+    }
+
+    public void excelOut() {
+        int rowCount = 0;
+        int columnCount = 0;
+        XSSFWorkbook x = new XSSFWorkbook();
+        XSSFSheet sheet = x.createSheet("Raid Roster");
+        for (Roles a : playerlist) {
+            Row row = sheet.createRow(rowCount++);
+            for (Roles b : playerlist) {
+                Cell cell = row.createCell(columnCount++);
+                if (b instanceof Roles) {
+                    cell.setCellValue((RichTextString) b);
+                }
+            }
+        } try (FileOutputStream dave = new FileOutputStream("Dave.xlsx")){
+            x.write(dave);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void addplayer10(Roles r) {

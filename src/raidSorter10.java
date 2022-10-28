@@ -1,45 +1,59 @@
 import javax.swing.*;
+import org.apache.poi.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.RichTextString;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 
 public class raidSorter10 {
     public static void main(String[] args) {
-        Raids r1 = new Raids("Naxxramas",10);
-        Raids r2 = new Raids("Naxxramas",25);
-        Roles a1 = new Roles("Ballongknut","Warrior","Fury","melee");
-        Roles a2 = new Roles("Sonics","Warrior","Fury","melee");
-        Roles a3 = new Roles("Dolmer","Paladin","Protection","tank");
-        Roles a4 = new Roles("Lealuna","Paladin","Protection","tank");
-        Roles a5 = new Roles("Plebtank","Paladin","Protection","tank");
-        Roles a6 = new Roles("Sylive","Death Knight","Blood","tank");
-        Roles a7 = new Roles("Coké","Death Knight","Frost","melee");
-        Roles a8 = new Roles("Gortha","Priest","Discipline","healer");
-        Roles a9 = new Roles("Shameal","Shaman","Restoration","healer");
-        Roles a10 = new Roles("Juan","Druid","Feral","melee");
-        Roles a11 = new Roles("Walker","Death Knight","Blood","melee");
-        Roles a12 = new Roles("Slizac","Shaman","Enhancement","melee");
-        Roles a13 = new Roles("Alnico","Shaman","Elemental","ranged");
-        Roles a14 = new Roles("Lilt","Rogue","Assasination","melee");
-        Roles a15 = new Roles("Teteh","Hunter","Beast Master","ranged");
-        Roles a16 = new Roles("Bonecaller","Warlock","Destruction","ranged");
-        Roles a17 = new Roles("Armaga","Mage","Fire","ranged");
-        Roles a18 = new Roles("Schmeal","Shaman","Restoration","healer");
+        Raids r1 = new Raids("Naxxramas", 10);
+        Raids r2 = new Raids("Naxxramas", 25);
+        Roles a1 = new Roles("Ballongknut", "Warrior", "Fury", "melee");
+        Roles a2 = new Roles("Sonics", "Warrior", "Fury", "melee");
+        Roles a3 = new Roles("Dolmer", "Paladin", "Protection", "tank");
+        Roles a4 = new Roles("Lealuna", "Paladin", "Protection", "tank");
+        Roles a5 = new Roles("Plebtank", "Paladin", "Protection", "tank");
+        Roles a6 = new Roles("Sylive", "Death Knight", "Blood", "tank");
+        Roles a7 = new Roles("Coké", "Death Knight", "Frost", "melee");
+        Roles a8 = new Roles("Gortha", "Priest", "Discipline", "healer");
+        Roles a9 = new Roles("Shameal", "Shaman", "Restoration", "healer");
+        Roles a10 = new Roles("Juan", "Druid", "Feral", "melee");
+        Roles a11 = new Roles("Walker", "Death Knight", "Blood", "melee");
+        Roles a12 = new Roles("Slizac", "Shaman", "Enhancement", "melee");
+        Roles a13 = new Roles("Alnico", "Shaman", "Elemental", "ranged");
+        Roles a14 = new Roles("Lilt", "Rogue", "Assasination", "melee");
+        Roles a15 = new Roles("Teteh", "Hunter", "Beast Master", "ranged");
+        Roles a16 = new Roles("Bonecaller", "Warlock", "Destruction", "ranged");
+        Roles a17 = new Roles("Armaga", "Mage", "Fire", "ranged");
+        Roles a18 = new Roles("Schmeal", "Shaman", "Restoration", "healer");
         //Roles a19 = new Roles("Gortha","Priest","Holy","healer");
-        Roles a20 = new Roles("Crazykami","Rogue","Combat","melee");
-        Roles a21 = new Roles("Myre","Druid","Feral","melee");
-        Roles a22 = new Roles("Emaenriel","Warlock","Affliction","ranged");
-        Roles a23 = new Roles("Malizzy","Warlock","Affliction","ranged");
-        Roles a24 = new Roles("Skumle","Shaman","Restoration","healer");
-        Roles a25 = new Roles("Toxpat","Hunter","Beast Master","ranged");
-        Roles a26 = new Roles("Snelis","Druid","Restoration","healer");
-        Roles a27 = new Roles("Noizz","Druid","Balance","ranged");
-        Roles a28 = new Roles("Hidon","Warlock","Affliction","ranged");
-        Roles a29 = new Roles("Justice","Death Knight","Blood","melee");
-        Roles a30 = new Roles("Dukun","Shaman","Restoration","Healer");
-        Roles a31 = new Roles("Proudmane","Shaman","Enchancement","melee");
-        Roles a32 = new Roles("Thaloc","Warlock","Destruction","ranged");
-        Roles a33 = new Roles("Wolfscream","Shaman","Enchancement","melee");
-        Roles a34 = new Roles("Chuchulingo","Shaman","Restoration","healer");
-        Roles a35 = new Roles("Mobba","Hunter","Beast Master","ranged");
-        Roles a36 = new Roles("Tusktusk","Rogue","Combat","melee");
+        Roles a20 = new Roles("Crazykami", "Rogue", "Combat", "melee");
+        Roles a21 = new Roles("Myre", "Druid", "Feral", "melee");
+        Roles a22 = new Roles("Emaenriel", "Warlock", "Affliction", "ranged");
+        Roles a23 = new Roles("Malizzy", "Warlock", "Affliction", "ranged");
+        Roles a24 = new Roles("Skumle", "Shaman", "Restoration", "healer");
+        Roles a25 = new Roles("Toxpat", "Hunter", "Beast Master", "ranged");
+        Roles a26 = new Roles("Snelis", "Druid", "Restoration", "healer");
+        Roles a27 = new Roles("Noizz", "Druid", "Balance", "ranged");
+        Roles a28 = new Roles("Hidon", "Warlock", "Affliction", "ranged");
+        Roles a29 = new Roles("Justice", "Death Knight", "Blood", "melee");
+        Roles a30 = new Roles("Dukun", "Shaman", "Restoration", "Healer");
+        Roles a31 = new Roles("Proudmane", "Shaman", "Enchancement", "melee");
+        Roles a32 = new Roles("Thaloc", "Warlock", "Destruction", "ranged");
+        Roles a33 = new Roles("Wolfscream", "Shaman", "Enchancement", "melee");
+        Roles a34 = new Roles("Chuchulingo", "Shaman", "Restoration", "healer");
+        Roles a35 = new Roles("Mobba", "Hunter", "Beast Master", "ranged");
+        Roles a36 = new Roles("Tusktusk", "Rogue", "Combat", "melee");
+        Roles a37 = new Roles("Novasai", "Priest", "Holy", "healer");
+        Roles a39 = new Roles("Sadistic", "Warrior", "Protection", "tank");
+        Roles a40 = new Roles("Fatal", "Death Knight", "Frost", "melee");
         Roster raid10 = new Roster(r1);
         Roster raid25 = new Roster(r2);
         System.out.println(r1);
@@ -126,6 +140,6 @@ public class raidSorter10 {
         System.out.println();
         System.out.println("**Bench**");
         raid10.checkBench();
-
+        //raid10.excelOut();
     }
 }
