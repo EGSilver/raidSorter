@@ -1,14 +1,4 @@
 import javax.swing.*;
-import org.apache.poi.*;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.RichTextString;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 
 public class raidSorter10 {
@@ -52,8 +42,12 @@ public class raidSorter10 {
         Roles a35 = new Roles("Mobba", "Hunter", "Beast Master", "ranged");
         Roles a36 = new Roles("Tusktusk", "Rogue", "Combat", "melee");
         Roles a37 = new Roles("Novasai", "Priest", "Holy", "healer");
-        Roles a39 = new Roles("Sadistic", "Warrior", "Protection", "tank");
-        Roles a40 = new Roles("Fatal", "Death Knight", "Frost", "melee");
+        Roles a38 = new Roles("Sadistic", "Warrior", "Protection", "tank");
+        Roles a39 = new Roles("Fatal", "Death Knight", "Frost", "melee");
+        Roles a40 = new Roles("Lightcinder", "Paladin", "Holy", "healer");
+        Roles a41 = new Roles("Lhyra", "Paladin", "Holy", "healer");
+        Roles a42 = new Roles("Marywanna", "Priest", "Holy", "healer");
+
         Roster raid10 = new Roster(r1);
         Roster raid25 = new Roster(r2);
         System.out.println(r1);
@@ -134,6 +128,18 @@ public class raidSorter10 {
                 raid10.addplayer10(a35); //Mobba
             } else if (a36.getName().equals(name)) {
                 raid10.addplayer10(a36); //Tusktusk
+            } else if (a37.getName().equals(name)) {
+                raid10.addplayer25(a37); //Novasai
+            } else if (a38.getName().equals(name)) {
+                raid10.addplayer25(a38); //Sadistic
+            } else if (a39.getName().equals(name)) {
+                raid10.addplayer25(a39); //Fatal
+            } else if (a40.getName().equals(name)) {
+                raid10.addplayer25(a37); //Lightcinder
+            } else if (a41.getName().equals(name)) {
+                raid10.addplayer25(a38); //Lhyra
+            } else if (a42.getName().equals(name)) {
+                raid10.addplayer25(a39); //Marywanna
             }
         }
         System.out.println();

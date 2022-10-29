@@ -40,6 +40,13 @@ public class raidSorter25 {
         Roles a34 = new Roles("Chuchulingo","Shaman","Restoration","healer");
         Roles a35 = new Roles("Mobba","Hunter","Beast Master","ranged");
         Roles a36 = new Roles("Tusktusk","Rogue","Combat","melee");
+        Roles a37 = new Roles("Novasai", "Priest", "Holy", "healer");
+        Roles a38 = new Roles("Sadistic", "Warrior", "Protection", "tank");
+        Roles a39 = new Roles("Fatal", "Death Knight", "Frost", "melee");
+        Roles a40 = new Roles("Lightcinder", "Paladin", "Holy", "healer");
+        Roles a41 = new Roles("Lhyra", "Paladin", "Holy", "healer");
+        Roles a42 = new Roles("Marywanna", "Priest", "Holy", "healer");
+
         Roster raid10 = new Roster(r1);
         Roster raid25 = new Roster(r2);
         System.out.println(r2);
@@ -82,8 +89,8 @@ public class raidSorter25 {
                 raid25.addplayer25(a17); //Armaga
             } else if (a18.getName().equals(name)) {
                 raid25.addplayer25(a18); //Schmeal
-            //} else if (a19.getName().equals(name)) {
-            //    raid25.addplayer25(a19); //Gortha
+                //} else if (a19.getName().equals(name)) {
+                //    raid25.addplayer25(a19); //Gortha
             } else if (a20.getName().equals(name)) {
                 raid25.addplayer25(a20); //Crazykami
             } else if (a21.getName().equals(name)) {
@@ -120,8 +127,21 @@ public class raidSorter25 {
                 raid25.addplayer25(a35); //Mobba
             } else if (a36.getName().equals(name)) {
                 raid25.addplayer25(a36); //Tusktusk
+            } else if (a37.getName().equals(name)) {
+                raid25.addplayer25(a37); //Novasai
+            } else if (a38.getName().equals(name)) {
+                raid25.addplayer25(a38); //Sadistic
+            } else if (a39.getName().equals(name)) {
+                raid25.addplayer25(a39); //Fatal
+            } else if (a40.getName().equals(name)) {
+                raid25.addplayer25(a37); //Lightcinder
+            } else if (a41.getName().equals(name)) {
+                raid25.addplayer25(a38); //Lhyra
+            } else if (a42.getName().equals(name)) {
+                raid25.addplayer25(a39); //Marywanna
             }
         }
+
         System.out.println();
         System.out.println("**Bench**");
         raid25.checkBench();
