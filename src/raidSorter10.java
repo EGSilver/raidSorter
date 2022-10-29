@@ -22,7 +22,7 @@ public class raidSorter10 {
         Roles a15 = new Roles("Teteh", "Hunter", "Beast Master", "ranged");
         Roles a16 = new Roles("Bonecaller", "Warlock", "Destruction", "ranged");
         Roles a17 = new Roles("Armaga", "Mage", "Fire", "ranged");
-        Roles a18 = new Roles("Schmeal", "Shaman", "Restoration", "healer");
+        Roles a18 = new Roles("Schameal", "Shaman", "Restoration", "healer");
         //Roles a19 = new Roles("Gortha","Priest","Holy","healer");
         Roles a20 = new Roles("Crazykami", "Rogue", "Combat", "melee");
         Roles a21 = new Roles("Myre", "Druid", "Feral", "melee");
