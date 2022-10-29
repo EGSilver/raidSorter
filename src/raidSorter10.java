@@ -11,7 +11,7 @@ public class raidSorter10 {
         Roles a4 = new Roles("Lealuna", "Paladin", "Protection", "tank");
         Roles a5 = new Roles("Plebtank", "Paladin", "Protection", "tank");
         Roles a6 = new Roles("Sylive", "Death Knight", "Blood", "tank");
-        Roles a7 = new Roles("Coké", "Death Knight", "Frost", "melee");
+        Roles a7 = new Roles("Coke", "Death Knight", "Frost", "melee");
         Roles a8 = new Roles("Gortha", "Priest", "Discipline", "healer");
         Roles a9 = new Roles("Shameal", "Shaman", "Restoration", "healer");
         Roles a10 = new Roles("Juan", "Druid", "Feral", "melee");
@@ -47,6 +47,7 @@ public class raidSorter10 {
         Roles a40 = new Roles("Lightcinder", "Paladin", "Holy", "healer");
         Roles a41 = new Roles("Lhyra", "Paladin", "Holy", "healer");
         Roles a42 = new Roles("Marywanna", "Priest", "Holy", "healer");
+        Roles a43 = new Roles("Keeah", "Mage", "Fire", "ranged");
 
         Roster raid10 = new Roster(r1);
         Roster raid25 = new Roster(r2);
@@ -135,11 +136,13 @@ public class raidSorter10 {
             } else if (a39.getName().equals(name)) {
                 raid10.addplayer25(a39); //Fatal
             } else if (a40.getName().equals(name)) {
-                raid10.addplayer25(a37); //Lightcinder
+                raid10.addplayer25(a40); //Lightcinder
             } else if (a41.getName().equals(name)) {
-                raid10.addplayer25(a38); //Lhyra
+                raid10.addplayer25(a41); //Lhyra
             } else if (a42.getName().equals(name)) {
-                raid10.addplayer25(a39); //Marywanna
+                raid10.addplayer25(a42); //Marywanna
+            } else if (a43.getName().equals(name)) {
+                raid25.addplayer25(a43); //Keeah
             }
         }
         System.out.println();

@@ -235,13 +235,13 @@ public class Roster {
                 playerCounter++;
                 rogue++;
                 System.out.println(playerCounter + " " + r.getName() + " " + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == tank && tankCounter < 3 && r.getPclass() == deathKnightClass && deathKnight < 3) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == tank && tankCounter < 3 && r.getPclass() == deathKnightClass && deathKnight < 5) {
                 tankCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
                 deathKnight++;
                 System.out.println(playerCounter + " " + r.getName() + " " + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == melee && meleeCounter < 10 && r.getPclass() == deathKnightClass && deathKnight < 3) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == melee && meleeCounter < 10 && r.getPclass() == deathKnightClass && deathKnight < 5) {
                 meleeCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
