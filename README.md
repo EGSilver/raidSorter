@@ -19,5 +19,5 @@ The program generates a simple csv file in "C:\Users\"
 
 <CSV Example>
 
-![image](https://user-images.githubusercontent.com/40366529/199036745-d9854cc9-c48b-4f89-85dd-e4c27a30fd93.png)
+![image](https://user-images.githubusercontent.com/40366529/199105446-8de495a0-43e6-47b3-90aa-02bfc8fca4ee.png)
 
