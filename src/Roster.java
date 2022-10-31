@@ -1,6 +1,9 @@
 
+
 import javax.swing.*;
+import java.io.IOException;
 import java.util.ArrayList;
+
 
 public class Roster {
     private Raids raid;
@@ -21,30 +24,9 @@ public class Roster {
     public static final String CYAN = "\033[0;36m";    // CYAN
     public static final String WHITE = "\033[0;37m";   // WHITE
     public static final String RESET = "\033[0m";  // Text Reset
-
     public Roster(Raids raid) {
         this.raid = raid;
     }
-
-/*    public void excelOut() {
-        int rowCount = 0;
-        int columnCount = 0;
-        XSSFWorkbook x = new XSSFWorkbook();
-        XSSFSheet sheet = x.createSheet("Raid Roster");
-        for (Roles a : playerlist) {
-            Row row = sheet.createRow(rowCount++);
-            for (Roles b : playerlist) {
-                Cell cell = row.createCell(columnCount++);
-                if (b instanceof Roles) {
-                    cell.setCellValue((RichTextString) b);
-                }
-            }
-        } try (FileOutputStream dave = new FileOutputStream("Dave.xlsx")){
-            x.write(dave);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
 
     public void addplayer10(Roles r) {
         String melee = "melee";
@@ -68,12 +50,18 @@ public class Roster {
                 playerCounter++;
                 warrior++;
                 System.out.println(playerCounter + " " + WHITE + r.getName() + " " + RESET + r.getType());
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == tank && tankCounter < 2 && r.getPclass() == warriorClass && warrior < 2) {
+                tankCounter++;
+                this.playerlist.add(r);
+                playerCounter++;
+                warrior++;
+                System.out.println(playerCounter + " " + r.getName() + " " + RESET + r.getType());
             } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == melee && meleeCounter < 3 && r.getPclass() == shamanClass && shaman < 2) {
                 this.playerlist.add(r);
                 meleeCounter++;
                 playerCounter++;
                 shaman++;
-                System.out.println(playerCounter + " " + BLUE + r.getName() + " " + RESET +  r.getType());
+                System.out.println(playerCounter + " " + BLUE + r.getName() + " " + RESET + r.getType());
             } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == healer && healerCounter < 2 && r.getPclass() == priestClass && priest < 2) {
                 healerCounter++;
                 this.playerlist.add(r);
@@ -85,7 +73,7 @@ public class Roster {
                 this.playerlist.add(r);
                 playerCounter++;
                 shaman++;
-                System.out.println(playerCounter + " "+ BLUE + r.getName() + " "+ RESET + r.getType());
+                System.out.println(playerCounter + " " + BLUE + r.getName() + " " + RESET + r.getType());
             } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == healer && healerCounter < 2 && r.getPclass() == druidClass && druid < 2) {
                 healerCounter++;
                 this.playerlist.add(r);
@@ -110,7 +98,7 @@ public class Roster {
                 playerCounter++;
                 paladin++;
                 System.out.println(playerCounter + " " + r.getName() + " " + RESET + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 3 && r.getPclass() == mageClass && mage <2) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 3 && r.getPclass() == mageClass && mage < 2) {
                 rangerCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
@@ -159,11 +147,16 @@ public class Roster {
                 System.out.println(playerCounter + " " + GREEN + r.getName() + " " + RESET + r.getType());
             } else
                 this.bench.add(r);
+
             //System.out.println(playerCounter);
         }
+//        FileOutputStream fileOut = new FileOutputStream("Roster10");
+//        workbook.write(fileOut);
+//        fileOut.close();
+//        workbook.close();
+//        System.out.println("Excel OK!");
+
     }
-
-
 
     public void addplayer25(Roles r) {
         String melee = "melee";
@@ -188,6 +181,12 @@ public class Roster {
                 playerCounter++;
                 warrior++;
                 System.out.println(playerCounter + " " + r.getName() + " " + r.getType());
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == tank && tankCounter < 2 && r.getPclass() == warriorClass && warrior < 2) {
+                tankCounter++;
+                this.playerlist.add(r);
+                playerCounter++;
+                warrior++;
+                System.out.println(playerCounter + " " + r.getName() + " " + RESET + r.getType());
             } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == melee && meleeCounter < 10 && r.getPclass() == shamanClass && shaman < 5) {
                 this.playerlist.add(r);
                 meleeCounter++;

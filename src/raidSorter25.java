@@ -70,7 +70,7 @@ public class raidSorter25 {
             } else if (a7.getName().equals(name)) {
                 raid25.addplayer25(a7); //Coké
             } else if (a8.getName().equals(name)) {
-                raid25.addplayer10(a8); //Gortha
+                raid25.addplayer25(a8); //Gortha
             } else if (a9.getName().equals(name)) {
                 raid25.addplayer25(a9); //Shameal
             } else if (a10.getName().equals(name)) {

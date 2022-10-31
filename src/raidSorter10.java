@@ -1,8 +1,12 @@
+
+
 import javax.swing.*;
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class raidSorter10 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Raids r1 = new Raids("Naxxramas", 10);
         Raids r2 = new Raids("Naxxramas", 25);
         Roles a1 = new Roles("Ballongknut", "Warrior", "Fury", "melee");
@@ -131,21 +135,21 @@ public class raidSorter10 {
             } else if (a36.getName().equals(name)) {
                 raid10.addplayer10(a36); //Tusktusk
             } else if (a37.getName().equals(name)) {
-                raid10.addplayer25(a37); //Novasai
+                raid10.addplayer10(a37); //Novasai
             } else if (a38.getName().equals(name)) {
-                raid10.addplayer25(a38); //Sadistic
+                raid10.addplayer10(a38); //Sadistic
             } else if (a39.getName().equals(name)) {
-                raid10.addplayer25(a39); //Fatal
+                raid10.addplayer10(a39); //Fatal
             } else if (a40.getName().equals(name)) {
-                raid10.addplayer25(a40); //Lightcinder
+                raid10.addplayer10(a40); //Lightcinder
             } else if (a41.getName().equals(name)) {
-                raid10.addplayer25(a41); //Lhyra
+                raid10.addplayer10(a41); //Lhyra
             } else if (a42.getName().equals(name)) {
-                raid10.addplayer25(a42); //Marywanna
+                raid10.addplayer10(a42); //Marywanna
             } else if (a43.getName().equals(name)) {
-                raid25.addplayer25(a43); //Keeah
+                raid10.addplayer10(a43); //Keeah
             } else if (a44.getName().equals(name)) {
-                raid25.addplayer25(a44); //Cavegirl
+                raid10.addplayer10(a44); //Cavegirl
             }
         }
         System.out.println();
@@ -154,4 +158,5 @@ public class raidSorter10 {
         raid10.checkBench();
         //raid10.excelOut();
     }
+
 }
