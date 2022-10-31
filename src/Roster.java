@@ -1,7 +1,9 @@
 
 
 import javax.swing.*;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 
@@ -280,6 +282,31 @@ public class Roster {
                 this.bench.add(r);
             //System.out.println(playerCounter);
         }
+    }
+
+    public void excelOut() throws IOException {
+        int counter = 0;
+        int benchCounter = 0;
+        FileWriter wr = new FileWriter("C:\\Users\\Roster.csv");
+        PrintWriter out = new PrintWriter(wr);
+        //for (int i = 0; i < playerlist.size(); i++) {
+        for (Roles k : playerlist) {
+            counter++;
+            wr.append(counter + " " + k.getName() + " " + k.getType());
+            wr.append("\n");
+
+        }
+        wr.append("\n");
+        wr.append("\n");
+        wr.append("**Bench**");
+        for (Roles e : bench) {
+            benchCounter++;
+            wr.append("\n");
+            wr.append(benchCounter + " " +e.getName());
+        }
+        out.flush();
+        out.close();
+        wr.close();
     }
 
     public void checkBench() {

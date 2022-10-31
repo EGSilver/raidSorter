@@ -156,7 +156,7 @@ public class raidSorter10 {
         System.out.println();
         System.out.println("**Bench**");
         raid10.checkBench();
-        //raid10.excelOut();
+        raid10.excelOut();
     }
 
 }
