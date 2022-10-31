@@ -110,7 +110,7 @@ public class Roster {
                 playerCounter++;
                 paladin++;
                 System.out.println(playerCounter + " " + r.getName() + " " + RESET + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 4 && r.getPclass() == mageClass && mage <2) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 3 && r.getPclass() == mageClass && mage <2) {
                 rangerCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
@@ -121,7 +121,7 @@ public class Roster {
                 playerCounter++;
                 druid++;
                 System.out.println(playerCounter + " " + r.getName() + " " + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 4 && r.getPclass() == druidClass && druid < 2) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 3 && r.getPclass() == druidClass && druid < 2) {
                 rangerCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
@@ -139,7 +139,7 @@ public class Roster {
                 playerCounter++;
                 deathKnight++;
                 System.out.println(playerCounter + " " + RED + r.getName() + " " + RESET + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 4 && r.getPclass() == warlockClass && warlock < 2) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 3 && r.getPclass() == warlockClass && warlock < 2) {
                 rangerCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
@@ -151,7 +151,7 @@ public class Roster {
                 playerCounter++;
                 deathKnight++;
                 System.out.println(playerCounter + " " + RED + r.getName() + " " + RESET + r.getType());
-            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 4 && r.getPclass() == hunterClass && hunter < 2) {
+            } else if (playerCounter < getRaid().getMax_raiders() && r.getType() == ranged && rangerCounter < 3 && r.getPclass() == hunterClass && hunter < 2) {
                 rangerCounter++;
                 this.playerlist.add(r);
                 playerCounter++;
