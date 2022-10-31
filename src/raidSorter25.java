@@ -47,6 +47,7 @@ public class raidSorter25 {
         Roles a41 = new Roles("Lhyra", "Paladin", "Holy", "healer");
         Roles a42 = new Roles("Marywanna", "Priest", "Holy", "healer");
         Roles a43 = new Roles("Keeah", "Mage", "Fire", "ranged");
+        Roles a44 = new Roles ("Cavegirl", "Hunter", "Beast Master", "ranged");
 
         Roster raid10 = new Roster(r1);
         Roster raid25 = new Roster(r2);
@@ -142,6 +143,8 @@ public class raidSorter25 {
                 raid25.addplayer25(a42); //Marywanna
             } else if (a43.getName().equals(name)) {
                 raid25.addplayer25(a43); //Keeah
+            } else if (a44.getName().equals(name)) {
+                raid25.addplayer25(a44); //Cavegirl
             }
         }
 
