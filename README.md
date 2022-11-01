@@ -3,7 +3,7 @@ Hench raidSorter
 
 Hench raid sorter is made to quickly let the algorithm create a raid composition either for 10 man or 25. Bench included.
 
-Java is required to run the software, visit https://www.java.com/en/
+Java is required to run the software, visit https://www.oracle.com/java/technologies/downloads/
 
 1. Download the code.
 2. Run the required batch file (sort10.bat or sort25.bat) available in the src folder.
@@ -20,4 +20,3 @@ The program generates a simple csv file in "C:\Users\"
 <CSV Example>
 
 ![image](https://user-images.githubusercontent.com/40366529/199105446-8de495a0-43e6-47b3-90aa-02bfc8fca4ee.png)
-
